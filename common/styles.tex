@@ -1,4 +1,5 @@
 %%% Шаблон %%%
+%вместо red написать black для черного цвета вставляемых значений
 \DeclareRobustCommand{\todo}{\textcolor{red}}       % решаем проблему превращения названия цвета в результате \MakeUppercase, http://tex.stackexchange.com/a/187930, \DeclareRobustCommand protects \todo from expanding inside \MakeUppercase
 \AtBeginDocument{%
     \setlength{\parindent}{2.5em}                   % Абзацный отступ. Должен быть одинаковым по всему тексту и равен пяти знакам (ГОСТ Р 7.0.11-2011, 5.3.7).
@@ -75,6 +76,8 @@
     }
 \fi
 
+
+%Раскоментировать hidelinks для того, чтобы цвет ссылок был черным
 \hypersetup{
     linktocpage=true,           % ссылки с номера страницы в оглавлении, списке таблиц и списке рисунков
 %    linktoc=all,                % both the section and page part are links
@@ -84,7 +87,7 @@
     linkcolor={linkcolor},      % цвет ссылок типа ref, eqref и подобных
     citecolor={citecolor},      % цвет ссылок-цитат
     urlcolor={urlcolor},        % цвет гиперссылок
-%    hidelinks,                  % Hide links (removing color and border)
+   % hidelinks,                  % Hide links (removing color and border)
     pdftitle={\thesisTitle},    % Заголовок
     pdfauthor={\thesisAuthor},  % Автор
     pdfsubject={\thesisSpecialtyNumber\ \thesisSpecialtyTitle},      % Тема
